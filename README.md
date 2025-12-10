@@ -160,7 +160,7 @@ api_key = "MYRADARRAPIKEY"
 ### Building from Source
 
 ```bash
-git clone https://github.com/wouterdebie/putioarr
+git clone https://github.com/ochronus/putioarr
 cd putioarr
 cargo build --release
 ```

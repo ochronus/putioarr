@@ -40,7 +40,7 @@ ARG TARGETARCH
 ARG BUILD_DATE
 ARG VERSION
 
-LABEL maintainer="wouterdebie"
+LABEL maintainer="ochronus"
 LABEL org.opencontainers.image.architecture="${TARGETARCH}"
 
 RUN apk add musl gcc gcompat

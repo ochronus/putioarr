@@ -1,8 +1,8 @@
 [package]
 name = "putioarr"
 description = "put.io to sonarr/radarr/whisparr proxy"
-authors = ["Wouter de Bie <wouter@evenflow.nl"]
-repository = "https://github.com/wouterdebie/putioarr"
+authors = ["Csaba Okrona <ochronus@ochronus.com"]
+repository = "https://github.com/ochronus/putioarr"
 license = "MIT"
 version = "0.5.36"
 edition = "2021"
