@@ -5,13 +5,13 @@ use std::cmp::max;
 
 use super::putio::PutIOTransfer;
 
-#[derive(Serialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct TransmissionResponse {
     pub result: String,
     pub arguments: Option<serde_json::Value>,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct TransmissionRequest {
     pub method: String,
     pub arguments: Option<serde_json::Value>,

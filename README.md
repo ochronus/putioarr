@@ -1,5 +1,7 @@
 # putioarr
 
+[![Tests](https://github.com/wouterdebie/putioarr/actions/workflows/test.yml/badge.svg)](https://github.com/wouterdebie/putioarr/actions/workflows/test.yml)
+
 Proxy that allows put.io to be used as a download client for sonarr/radarr/whisparr. The proxy uses the Transmission protocol.
 
 ## Installation
@@ -152,6 +154,78 @@ api_key = "MYRADARRAPIKEY"
 - (Add option to not delete downloads)
 - Figure out a better way to map a transfer to a completed import. Since a transfer can contain multiple files (e.g. a whole season) we currently check if all video files have been imported. Most of the time this is fine, except when there are sample videos. sonarr/radarr/whisparr will not import samples, but will make no mention of the fact that the sample was skipped. Right now we check against the `skip_directories` list, which works, but might be tedious.
 - Automatically pick the right putio proxy based on speed
+
+## Development
+
+### Building from Source
+
+```bash
+git clone https://github.com/wouterdebie/putioarr
+cd putioarr
+cargo build --release
+```
+
+The binary will be available at `target/release/putioarr`.
+
+### Continuous Integration
+
+This project uses GitHub Actions for automated testing:
+- Tests run automatically on all PRs and pushes
+- Dependabot PRs are automatically tested
+- Passing patch/minor dependency updates auto-merge
+- Tests run on Ubuntu and macOS with stable and beta Rust
+
+See the [workflow status](https://github.com/wouterdebie/putioarr/actions) for current CI status.
+
+### Testing
+
+This project includes a comprehensive test suite with 99 passing tests covering all major components.
+
+#### Running Tests
+
+```bash
+# Run all tests
+cargo test
+
+# Run tests with output
+cargo test -- --nocapture
+
+# Run specific test module
+cargo test transmission_tests::
+
+# Run a specific test
+cargo test test_name
+```
+
+#### Test Coverage
+
+- **Services Layer**: Transmission protocol, Put.io API structures
+- **HTTP Layer**: Authentication, routing, request/response handling
+- **Download System**: Transfer management, download targets
+- **Configuration**: TOML parsing, validation, defaults
+- **Utilities**: Template generation, config file creation
+
+For detailed testing documentation, see:
+- `TESTING.md` - Comprehensive testing guide
+- `CHANGELOG.md` - Recent changes and updates
+- `CI_CD.md` - CI/CD automation documentation
+
+### Contributing
+
+Contributions are welcome! When contributing:
+
+1. Add tests for new features
+2. Ensure `cargo test` passes
+3. Run `cargo fmt` to format code
+4. Run `cargo clippy` to check for issues
+5. Update documentation as needed
+6. Update `CHANGELOG.md`
+
+All PRs will automatically run tests via GitHub Actions. The CI pipeline checks:
+- Test suite passes on Ubuntu and macOS
+- Code formatting (`cargo fmt`)
+- Clippy linting (`cargo clippy`)
+- Successful builds
 
 ## Thanks
 Thanks to [davidchalifoux](https://github.com/davidchalifoux) for borrowed code from kaput-cli.

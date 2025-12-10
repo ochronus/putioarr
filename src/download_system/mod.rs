@@ -6,6 +6,9 @@ pub mod download;
 pub mod orchestration;
 pub mod transfer;
 
+#[cfg(test)]
+mod transfer_tests;
+
 pub async fn start(app_data: Data<AppData>) -> Result<()> {
     let (sender, receiver) = async_channel::unbounded();
     let (download_sender, download_receiver) = async_channel::unbounded();

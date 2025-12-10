@@ -13,7 +13,7 @@ use anyhow::{bail, Context, Result};
 use log::error;
 use serde_json::json;
 
-const SESSION_ID: &str = "useless-session-id";
+pub const SESSION_ID: &str = "useless-session-id";
 
 #[post("/transmission/rpc")]
 pub(crate) async fn rpc_post(

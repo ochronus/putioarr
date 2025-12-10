@@ -1,12 +1,12 @@
 use anyhow::Result;
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 use std::{fs, io::Write, path::Path, time::Duration};
 use tinytemplate::TinyTemplate;
 use tokio::time::sleep;
 
 use crate::services;
 
-static TEMPLATE: &str = r#"# Required. Username and password that sonarr/radarr use to connect to the proxy
+pub static TEMPLATE: &str = r#"# Required. Username and password that sonarr/radarr use to connect to the proxy
 username = "myusername"
 password = "mypassword"
 
@@ -61,9 +61,9 @@ api_key = "MYWHISPARRAPIKEY"
 
 "#;
 
-#[derive(Serialize)]
-struct Context {
-    putio_api_key: String,
+#[derive(Serialize, Deserialize)]
+pub struct Context {
+    pub putio_api_key: String,
 }
 
 pub async fn generate_config(config_path: &str) -> Result<()> {

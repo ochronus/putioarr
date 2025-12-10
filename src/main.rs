@@ -17,6 +17,11 @@ mod http;
 mod services;
 mod utils;
 
+#[cfg(test)]
+mod config_tests;
+#[cfg(test)]
+mod utils_tests;
+
 /// put.io to sonarr/radarr proxy
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
