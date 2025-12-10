@@ -5,7 +5,6 @@ mod tests {
         providers::{Format, Serialized, Toml},
         Figment,
     };
-    use serde_json;
     use std::fs;
     use tempfile::NamedTempFile;
 

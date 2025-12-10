@@ -277,7 +277,7 @@ For questions or issues:
 - **Tests**: See [TESTING.md](TESTING.md)
 - **CI/CD**: See [CI_CD.md](CI_CD.md)
 - **Changes**: See [CHANGELOG.md](CHANGELOG.md)
-- **Issues**: https://github.com/wouterdebie/putioarr/issues
+- **Issues**: https://github.com/ochronus/putioarr/issues
 
 ---
 

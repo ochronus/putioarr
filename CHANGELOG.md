@@ -39,13 +39,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `Serialize` derive to `TransmissionRequest` struct
 - Added `Deserialize` derive to `TransmissionResponse` struct
 - Added `Deserialize` derive to `Context` struct
+- Updated Docker registry from `ghcr.io/wouterdebie/putioarr` to `ghcr.io/ochronus/putioarr`
+- Updated all repository references from `wouterdebie` to `ochronus`
+
+### Fixed
+- Code formatting issues (empty struct formatting)
+- Clippy warnings (removed redundant imports, added `#[allow(dead_code)]` for tested API structs)
 
 ### Documentation
 - Added comprehensive testing documentation
-- Added test coverage summary
 - Documented all test modules and their purposes
 - Included examples of running tests
 - Added troubleshooting section for common test issues
+- Updated all documentation with correct repository owner
 
 ## [0.5.36] - 2025-12-10
 
@@ -131,6 +137,6 @@ When contributing to this project:
 
 ## Links
 
-- [Repository](https://github.com/wouterdebie/putioarr)
-- [Issues](https://github.com/wouterdebie/putioarr/issues)
-- [Pull Requests](https://github.com/wouterdebie/putioarr/pulls)
+- [Repository](https://github.com/ochronus/putioarr)
+- [Issues](https://github.com/ochronus/putioarr/issues)
+- [Pull Requests](https://github.com/ochronus/putioarr/pulls)

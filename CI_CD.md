@@ -143,8 +143,8 @@ Cache keys are based on `Cargo.lock` hash, ensuring fresh builds when dependenci
 
 View the current status of workflows:
 
-- **Badge**: ![Tests](https://github.com/wouterdebie/putioarr/actions/workflows/test.yml/badge.svg)
-- **Actions Page**: https://github.com/wouterdebie/putioarr/actions
+- **Badge**: ![Tests](https://github.com/ochronus/putioarr/actions/workflows/test.yml/badge.svg)
+- **Actions Page**: https://github.com/ochronus/putioarr/actions
 
 ## Permissions
 

@@ -1,6 +1,6 @@
 # putioarr
 
-[![Tests](https://github.com/wouterdebie/putioarr/actions/workflows/test.yml/badge.svg)](https://github.com/wouterdebie/putioarr/actions/workflows/test.yml)
+[![Tests](https://github.com/ochronus/putioarr/actions/workflows/test.yml/badge.svg)](https://github.com/ochronus/putioarr/actions/workflows/test.yml)
 
 Proxy that allows put.io to be used as a download client for sonarr/radarr/whisparr. The proxy uses the Transmission protocol.
 
@@ -37,7 +37,7 @@ The first time you run your docker container, run it without the `-d` option, si
 
 We utilise the docker manifest for multi-platform awareness.
 
-Simply pulling `ghcr.io/wouterdebie/putioarr:latest` should retrieve the correct image for your arch (amd64 or arm64).
+Simply pulling `ghcr.io/ochronus/putioarr:latest` should retrieve the correct image for your arch (amd64 or arm64).
 
 #### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 ```yaml
@@ -45,7 +45,7 @@ Simply pulling `ghcr.io/wouterdebie/putioarr:latest` should retrieve the correct
 version: "2.1"
 services:
   putioarr:
-    image: ghcr.io/wouterdebie/putioarr:latest
+    image: ghcr.io/ochronus/putioarr:latest
     container_name: putioarr
     environment:
       - PUID=1000
@@ -71,7 +71,7 @@ docker run -d \
   -v /path/to/putioarr/config:/config \
   -v /path/to/your/downloads:/downloads \
   --restart unless-stopped \
-  ghcr.io/wouterdebie/putioarr:latest
+  ghcr.io/ochronus/putioarr:latest
 
 ```
 #### Parameters
@@ -175,7 +175,7 @@ This project uses GitHub Actions for automated testing:
 - Passing patch/minor dependency updates auto-merge
 - Tests run on Ubuntu and macOS with stable and beta Rust
 
-See the [workflow status](https://github.com/wouterdebie/putioarr/actions) for current CI status.
+See the [workflow status](https://github.com/ochronus/putioarr/actions) for current CI status.
 
 ### Testing
 

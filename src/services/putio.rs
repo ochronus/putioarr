@@ -4,6 +4,7 @@ use serde::{Deserialize, Serialize};
 use std::{collections::HashMap, time::Duration};
 
 #[derive(Debug, Serialize, Deserialize)]
+#[allow(dead_code)]
 pub struct PutIOAccountInfo {
     pub username: String,
     pub mail: String,
@@ -11,6 +12,7 @@ pub struct PutIOAccountInfo {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+#[allow(dead_code)]
 pub struct PutIOAccountResponse {
     pub info: PutIOAccountInfo,
 }
@@ -38,8 +40,7 @@ impl PutIOTransfer {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct AccountInfoResponse {
-}
+pub struct AccountInfoResponse {}
 
 pub async fn account_info(api_token: &str) -> Result<AccountInfoResponse> {
     let client = reqwest::Client::new();
@@ -188,6 +189,7 @@ pub async fn upload_file(api_token: &str, bytes: &[u8]) -> Result<()> {
     Ok(())
 }
 #[derive(Debug, Serialize, Deserialize)]
+#[allow(dead_code)]
 pub struct UrlResponse {
     pub url: String,
 }
