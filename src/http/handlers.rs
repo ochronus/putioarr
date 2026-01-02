@@ -41,13 +41,18 @@ pub(crate) async fn handle_torrent_add(
         let magnet_url = arguments["filename"].as_str().unwrap();
         putio::add_transfer(api_token, magnet_url).await?;
         match Magnet::new(magnet_url) {
-            Ok(m) if m.dn.is_some() => {
-                info!(
-                    "{}: magnet link uploaded",
-                    format!("[ffff: {}]", urldecode::decode(m.dn.unwrap())).magenta()
-                );
-            }
-            _ => {
+            Ok(m) => match m.display_name() {
+                Some(name) => {
+                    info!(
+                        "{}: magnet link uploaded",
+                        format!("[ffff: {}]", urldecode::decode(name.to_string())).magenta()
+                    );
+                }
+                None => {
+                    info!("unknown magnet link uploaded");
+                }
+            },
+            Err(_) => {
                 info!("unknown magnet link uploaded");
             }
         }
