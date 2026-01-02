@@ -10,7 +10,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-rt = "2.9.0"
+actix-rt = "2.11.0"
 actix-web = "4.12.1"
 actix-web-httpauth = "0.8.0"
 ahash = "=0.8.12"
@@ -48,5 +48,5 @@ cargo-bump = "1.1.0"
 mockito = "1.2.0"
 tokio = { version = "1.43.1", features = ["test-util", "macros"] }
 actix-web = { version = "4.12.1", features = ["macros"] }
-actix-rt = "2.9.0"
+actix-rt = "2.11.0"
 tempfile = "3.24.0"
