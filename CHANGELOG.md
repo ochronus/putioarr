@@ -53,6 +53,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added troubleshooting section for common test issues
 - Updated all documentation with correct repository owner
 
+## [0.5.37] - 2026-01-02
+
+### Changed
+- Migrated to `magnet-url` v3 API and replaced the deprecated `dn` usage with `display_name`.
+- Improved magnet upload logging to handle missing display names without panics.
+
+### Fixed
+- Restored build compatibility after the `magnet-url` v3 upgrade.
+
 ## [0.5.36] - 2025-12-10
 
 ### Features
